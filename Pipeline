@@ -1,4 +1,4 @@
-#!binbash
+#!bash
 #fibro
 #work
 wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR148/088/SRR14827288/SRR14827288_1.fastq.gz
