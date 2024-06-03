@@ -14,7 +14,7 @@ wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR148/089/SRR14827289/SRR14827289_1
 <pre><code>bowtie2 -q -p 4 -k 1 --local --no-unal -x GRCm39 -1 SRR14827288_1.fastq -2 SRR14827288_2.fastq > /home/dvoyashov/papka_for_danya_lox/results/bowtie/SRR14827288.sam \
 bowtie2 -q -p 4 -k 1 --local --no-unal -x GRCm39 -1 SRR14827289_1.fastq -2 SRR14827289_2.fastq> /home/dvoyashov/papka_for_danya_lox/results/bowtie/Fibro_input.sam</code></pre>
 
-####Mitochondrial reads filtration
+#### Mitochondrial reads filtration
 
 <pre><code>sed '/chrM/d;/random/d;/chrUn/d' $1.sam > $1_filtered.sam \
 /mnt/StudentsWork/pdocshin/CHIP/prog/samtools-1.19.2/sam_view.c -S -b $1_filtered.sam > $1.bam \
